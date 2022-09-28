@@ -221,7 +221,6 @@ h2{
   color: #fff;
 }
 
-
 .loader{-webkit-animation:spin 1s linear infinite;
   animation:spin 1s linear infinite;
   border:10px solid #f3f3f3;
@@ -232,7 +231,6 @@ h2{
   opacity:.7;
   position:absolute;
   top:50%;width:80px}
-
 
 .loader {
   border: 10px solid #f3f3f3;

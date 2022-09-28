@@ -1,5 +1,3 @@
-
-
 const SiteNavMenu = () => {  
     return (
     <div className="flex justify-center contrast">
@@ -12,5 +10,3 @@ const SiteNavMenu = () => {
 };
 
 export default SiteNavMenu
-
-

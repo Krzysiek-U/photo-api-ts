@@ -1,6 +1,5 @@
 import  {useState}  from 'react';
 
-
 const FontSizeChanger = () => {  
   
   let doc = document.getElementsByTagName("html");

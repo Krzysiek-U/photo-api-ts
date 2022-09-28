@@ -1,5 +1,3 @@
-
-
 const Banner = () => {  
     return (
       <div className='banner contrast'>
@@ -9,5 +7,3 @@ const Banner = () => {
 };
 
 export default Banner
-
-

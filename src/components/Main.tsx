@@ -29,7 +29,7 @@ function  Main()  {
 
     const changePage  = (pageTemp:string) => {    
       if (pageTemp === 'prev' && page > 1) setPage(page-1) 
-      else if  (pageTemp === 'next' && page < 30) setPage(page+1) 
+      else if  (pageTemp === 'next' && page < 900/limit) setPage(page+1) 
     }    
 
     const changePhotoNumb  = (photoNumb:number) => {    

@@ -11,6 +11,7 @@ function  Main()  {
     const [newTab, setNewTab] = useState([]);
     const [page, setPage] = useState(1);
     const [limit, setLimit] = useState(30);
+    const maxPhotoNumb = 900;
     
     useEffect(() => {
       fetch( `https://picsum.photos/v2/list?page=${ page }&limit=${ limit }` ).then((response) => {
@@ -29,7 +30,7 @@ function  Main()  {
 
     const changePage  = (pageTemp:string) => {    
       if (pageTemp === 'prev' && page > 1) setPage(page-1) 
-      else if  (pageTemp === 'next' && page < 900/limit) setPage(page+1) 
+      else if  (pageTemp === 'next' && page < maxPhotoNumb/limit) setPage(page+1) 
     }    
 
     const changePhotoNumb  = (photoNumb:number) => {    
@@ -44,7 +45,7 @@ function  Main()  {
       <main>
         <Banner/>
         <div id='photoNav' className='photo-nav'>          
-          <NextPrev page={page} changePage={changePage} />
+          <NextPrev page={page} limit={limit} maxPhotoNumb={maxPhotoNumb} changePage={changePage} />
           <PhotoNumbChanger limit={limit} changePhotoNumb={changePhotoNumb} />
         </div>
         <div className="row photo-table-container contrast">

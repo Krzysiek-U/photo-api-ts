@@ -8,8 +8,9 @@ const PhotoNumbChanger = (props:PhotoNumbChangerProps) => {
   const activeLink = (limit: number) => {
     return ( 
       <a id={`photoNumb_${limit}`} title={`zmień ilość wyświetlanych zdjęć na stronie na ${limit}`}
-             className= { props.limit === limit ? `active photoNumb-${limit} ` : `photoNumb-${limit} `  }   
-             href="#" onClick={ () =>  props.changePhotoNumb(limit) }>{limit}</a>
+             className= { props.limit === limit ? `a-button active photoNumb-${limit} ` : `a-button photoNumb-${limit} `  }   
+             role="button"
+             onClick={ () =>  props.changePhotoNumb(limit) }>{limit}</a>
      );
   }
     

@@ -119,6 +119,10 @@ a {
   vertical-align: text-bottom;
 }
 
+.a-button {
+  cursor: pointer;
+}
+
 .changing-photo-numb-container  a:hover, .next-prev-container a:hover {
   color: #333;
   background: #eeeeee;

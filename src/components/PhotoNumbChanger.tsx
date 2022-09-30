@@ -1,27 +1,35 @@
 interface PhotoNumbChangerProps {
-  changePhotoNumb: ( photoNumb:number ) => void;
   limit: number;
+  changePhotoNumb: ( photoNumb:number ) => void;
 }
+
+interface ActiveLinkProps {
+  limitNew: number;
+  limit: number;    
+  onClick:  ( ) => void;    
+}
+
+const ActiveLink = (props:ActiveLinkProps) => {
+  return ( 
+    <a id={`photoNumb_${props.limit}`} title={`zmień ilość wyświetlanych zdjęć na stronie na ${props.limit}`}
+            className= { props.limitNew === props.limit ? `a-button active photoNumb-${props.limit} ` : `a-button photoNumb-${props.limit} `  }   
+            role="button"
+            onClick={props.onClick}
+            >{props.limitNew}</a>
+    );
+}
+
  
 const PhotoNumbChanger = (props:PhotoNumbChangerProps) => { 
-
-  const activeLink = (limit: number) => {
-    return ( 
-      <a id={`photoNumb_${limit}`} title={`zmień ilość wyświetlanych zdjęć na stronie na ${limit}`}
-             className= { props.limit === limit ? `a-button active photoNumb-${limit} ` : `a-button photoNumb-${limit} `  }   
-             role="button"
-             onClick={ () =>  props.changePhotoNumb(limit) }>{limit}</a>
-     );
-  }
     
     return (
       <div id='changingPhotoNumb' className='changing-photo-numb contrast'>
         <div className='changing-photo-numb-container'>
           <span>Zmień ilość zdjęć na stronie </span>
-          {activeLink(20)}
-          {activeLink(30)}
-          {activeLink(50)}
-          {activeLink(100)}
+          <ActiveLink limit={props.limit} limitNew={20} onClick={ () =>  props.changePhotoNumb(20) }/>
+          <ActiveLink limit={props.limit} limitNew={30} onClick={ () =>  props.changePhotoNumb(30) }/>
+          <ActiveLink limit={props.limit} limitNew={50} onClick={ () =>  props.changePhotoNumb(50) }/>
+          <ActiveLink limit={props.limit} limitNew={100} onClick={ () =>  props.changePhotoNumb(100) }/>
         </div>
       </div>
   );

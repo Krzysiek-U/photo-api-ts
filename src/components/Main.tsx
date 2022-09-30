@@ -33,8 +33,12 @@ function  Main()  {
       else if  (pageTemp === 'next' && page < maxPhotoNumb/limit) setPage(page+1) 
     }    
 
-    const changePhotoNumb  = (photoNumb:number) => {    
-      setLimit(photoNumb) 
+    const changePhotoNumb  = (photoNumb:number) => {  
+      setLimit(photoNumb) ; 
+    }
+
+    if (limit * page > maxPhotoNumb ) {
+      setPage(maxPhotoNumb/limit)
     }
 
     const photoList = newTab.map((photo, index) => {

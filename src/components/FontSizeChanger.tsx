@@ -16,9 +16,9 @@ const FontSizeChanger = () => {
 
     return (
       <span id='changeFontSizeContener'>
-        <a id='changeFontSizeDown' title='Zmniejsz wielkość czcionki' className='a-button font-size-change' role="button" onClick={ () =>  htmlFont(rootFontSize-2)  }> - </a>
-        <a id='changeFontSizeStart' title='Ustaw standardową wielkść czcionki' className='a-button font-size-change' role="button" onClick={ () =>  htmlFont(rootFontSizeStart)  }> A </a>
-        <a id='changeFontSizeUp' title='Zwiększ wielkość czcionki' className='a-button font-size-change' role="button" onClick={ () =>  htmlFont(rootFontSize+2)  }> + </a>
+        <a id='changeFontSizeDown' title='Zmniejsz wielkość czcionki' className='a-button font-size-change' role="button" tabIndex={0} onClick={ () =>  htmlFont(rootFontSize-2)  }> - </a>
+        <a id='changeFontSizeStart' title='Ustaw standardową wielkść czcionki' className='a-button font-size-change' role="button" tabIndex={0} onClick={ () =>  htmlFont(rootFontSizeStart)  }> A </a>
+        <a id='changeFontSizeUp' title='Zwiększ wielkość czcionki' className='a-button font-size-change'  role="button" tabIndex={0} onClick={ () =>  htmlFont(rootFontSize+2)  }> + </a>
       </span>
   );
 };

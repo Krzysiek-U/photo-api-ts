@@ -1,4 +1,5 @@
 {
+  "start_url": ".",
   "homepage": "https://krzysiek-u.github.io/photo-api-ts/",
   "name": "photo-api-ts-app",
   "version": "0.1.0",
@@ -11,7 +12,6 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.1",
@@ -44,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }

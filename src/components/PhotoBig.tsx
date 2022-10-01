@@ -6,7 +6,7 @@ const Photo = () => {
 
   return (    
     <div className='photo-container-big contrast'>
-      <Link to="/">
+      <Link to={`/`}>
         <span className='big-photo-link'><i className="fa fa-chevron-left"></i>  powrót na stronę galerii</span>
         <h1 className='contrast '><span>Autor zdjęcia: </span> {searchParams.get('autor')} </h1>
         <img

@@ -1,6 +1,6 @@
 import React  from 'react';
-//import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
-import { HashRouter as Router, Link, Route, Routes  } from 'react-router-dom'
+import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
+//import { HashRouter as Router, Link, Route, Routes  } from 'react-router-dom'
 import Nav from './components/Nav';
 import Main from './components/Main';
 import PhotoBig from './components/PhotoBig';
@@ -12,15 +12,15 @@ function App() {
 
   return (
     //<Router basename={process.env.PUBLIC_URL}>    
-    <Router >
+    <Router  basename='/photo-api-ts'>
       <div className="App contrast" >
         <header className="header contrast">
           <Nav/>
         </header>        
         <Routes>
           <Route path='/photo-api-ts/' element={<Main/>} />
-          <Route path='/photo-api-ts/photo' element={<PhotoBig/>} />
-          <Route path='/photo-api-ts/about' element={<About/>} />
+          <Route path='/photo' element={<PhotoBig/>} />
+          <Route path='/about' element={<About/>} />
         </Routes>
         <footer className="footer contrast">
           <Footer/>

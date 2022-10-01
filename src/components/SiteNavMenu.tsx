@@ -4,9 +4,9 @@ const SiteNavMenu = () => {
     return (
       <div id='siteNavMenu' className='site-nav-menu'>
         <div>
-          <Link to={`/photo-api-ts/`}>Galeria</Link>
+          <Link to={`/`}>Galeria</Link>
           <span>|</span>
-          <Link to={`/photo-api-ts/about`}>O galerii</Link>
+          <Link to={`/about`}>O galerii</Link>
         </div>
       </div>
   );

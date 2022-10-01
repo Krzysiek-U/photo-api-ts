@@ -19,7 +19,7 @@ function App() {
           <Nav/>
         </header>        
         <Routes>
-          <Route path={process.env.PUBLIC_URL + '/'} element={<Main/>} />
+          <Route path='/' element={<Main/>} />
           <Route path='/photo' element={<PhotoBig/>} />
           <Route path='/about' element={<About/>} />
         </Routes>

@@ -12,13 +12,14 @@ function App() {
 
   return (
     //<Router basename={process.env.PUBLIC_URL}>    
-    <Router  basename='/photo-api-ts'>
+    //<Router  basename='/photo-api-ts'>
+    <Route path={process.env.PUBLIC_URL + '/'}>
       <div className="App contrast" >
         <header className="header contrast">
           <Nav/>
         </header>        
         <Routes>
-          <Route path='/photo-api-ts' element={<Main/>} />
+          <Route path='/' element={<Main/>} />
           <Route path='/photo' element={<PhotoBig/>} />
           <Route path='/about' element={<About/>} />
         </Routes>

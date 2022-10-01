@@ -20,8 +20,8 @@ function App() {
         </header>        
         <Routes>
           <Route path={process.env.PUBLIC_URL + '/'} element={<Main/>} />
-          <Route path={process.env.PUBLIC_URL + '/photo'} element={<PhotoBig/>} />
-          <Route path={process.env.PUBLIC_URL + '/about'} element={<About/>} />
+          <Route path='/photo' element={<PhotoBig/>} />
+          <Route path='/about' element={<About/>} />
         </Routes>
         <footer className="footer contrast">
           <Footer/>

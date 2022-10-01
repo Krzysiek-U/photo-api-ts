@@ -6,7 +6,7 @@ const SiteNavMenu = () => {
         <div>
           <Link to={`/photo-api-ts/`}>Galeria</Link>
           <span>|</span>
-          <Link to={`/about`}>O galerii</Link>
+          <Link to={`/photo-api-ts/about`}>O galerii</Link>
         </div>
       </div>
   );

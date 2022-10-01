@@ -12,7 +12,7 @@ function App() {
 
   return (
     <Router basename={process.env.PUBLIC_URL}>   
-      <div className="App contrast" >!
+      <div className="App contrast" >
         <header className="header contrast">
           <Nav/>
         </header>        

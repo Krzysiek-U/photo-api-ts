@@ -8,7 +8,7 @@ const Photo = ( props: PhotoProps ) => {
 
   return (    
     <div className='photo-container contrast'>
-      <Link to={`/photo-api-ts/photo/?id=${props.photo.id}&autor=${props.photo.author}`}>
+      <Link to={`/photo/?id=${props.photo.id}&autor=${props.photo.author}`}>
 
         <img
           alt = { `Zdjęcie o numerze ${props.photo.id}, autor zdjęcia: ${props.photo.author}` }

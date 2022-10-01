@@ -11,15 +11,13 @@ interface ActiveLinkProps {
 
 const ActiveLink = (props:ActiveLinkProps) => {
   return ( 
-    <a id={`photoNumb_${props.limit}`} title={`zmień ilość wyświetlanych zdjęć na stronie na ${props.limit}`}
+    <button id={`photoNumb_${props.limit}`} title={`zmień ilość wyświetlanych zdjęć na stronie na ${props.limit}`}
             className= { props.limitNew === props.limit ? `a-button active photoNumb-${props.limit} ` : `a-button photoNumb-${props.limit} `  }   
             role="button"
-            tabIndex={0}
             onClick={props.onClick}
-            >{props.limitNew}</a>
+            >{props.limitNew}</button>
     );
 }
-
  
 const PhotoNumbChanger = (props:PhotoNumbChangerProps) => { 
     

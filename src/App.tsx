@@ -1,6 +1,6 @@
 import React  from 'react';
-import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
-//import { HashRouter as Router, Link, Route, Routes  } from 'react-router-dom'
+//import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Link, Route, Routes  } from 'react-router-dom'
 import Nav from './components/Nav';
 import Main from './components/Main';
 import PhotoBig from './components/PhotoBig';

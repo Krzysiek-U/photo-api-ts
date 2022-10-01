@@ -18,7 +18,7 @@ function App() {
           <Nav/>
         </header>        
         <Routes>
-          <Route path='/photo-api-ts/' element={<Main/>} />
+          <Route path='/photo-api-ts' element={<Main/>} />
           <Route path='/photo' element={<PhotoBig/>} />
           <Route path='/about' element={<About/>} />
         </Routes>

@@ -1,6 +1,6 @@
 {
   "homepage": "https://krzysiek-u.github.io/photo-api-ts",
-  "name": "photo-api-ts-app",
+  "name": "photo-api-ts",
   "version": "0.1.0",
   "private": false,
   "dependencies": {

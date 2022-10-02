@@ -13,15 +13,15 @@ function App() {
   return (
     //<Router basename={process.env.PUBLIC_URL}> 
     //</Router><Router basename='/photo-api-ts/'>    
-    <Router  basename={process.env.PUBLIC_URL + '/'}>
+    <Router basename={process.env.PUBLIC_URL + '/'}>
       <div className="App contrast" >
         <header className="header contrast">
           <Nav/>
         </header>        
         <Routes>
-          <Route path={process.env.PUBLIC_URL + '/'} element={<Main/>} />
-          <Route path={process.env.PUBLIC_URL + '/photo'} element={<PhotoBig/>} />
-          <Route path={process.env.PUBLIC_URL + '/about'} element={<About/>} />
+          <Route path= '/' element={<Main/>} />
+          <Route path= '/photo' element={<PhotoBig/>} />
+          <Route path= '/about' element={<About/>} />
         </Routes>
         <footer className="footer contrast">
           <Footer/>

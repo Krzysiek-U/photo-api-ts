@@ -40,8 +40,10 @@ nav {
 .next-prev-container span {
   border: 1px solid #e3e3e3;
   display: inline-block;
-  padding: 5px 10px;
-  margin: 10px 1px;
+  padding: 8px 10px;
+    /* margin: 10px 1px; */
+  position: relative;
+  top: 1px;
 }
 
 #nextPhotos {
@@ -51,15 +53,21 @@ nav {
   padding-left: 10px;
 }
 
-.changing-photo-numb-container {
-  width: fit-content;
-  margin: auto;
+.changing-photo-numb-container, .next-prev-container {
   min-width: 80%;
-  text-align: center;
+  margin: 20px auto 0;
 }
 
 .changing-photo-numb-container span {
-  padding-top: 14px;
+  /*padding-top: 14px;*/
+  padding: 0px;
+  padding-top: 0px;
+  margin: 0px;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding-bottom: 10px;
+  position: relative;
+  bottom: 11px;
 }
 
 .changing-photo-numb-container  a {
@@ -69,9 +77,9 @@ nav {
 }
 
 .next-prev-container {
-  width: fit-content;
+  /*width: fit-content;
   margin: auto;
-  min-width: 80%;
+  min-width: 80%;*/
 }
 
 .photo-nav div{
@@ -112,6 +120,31 @@ i {
   margin-top: 40px;
 }
 
+button {
+  font-size: 18px;
+  font-family: Roboto,sans-serif;
+  background: #fff;
+}
+
+.changing-photo-numb-container button {
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+  color: #14225b;
+  padding: 8px;
+  text-decoration: none;
+  vertical-align: text-bottom;
+  margin: 3px 5px;
+}
+
+.changing-photo-numb-container  button:hover, .next-prev-container button:hover {
+  color: #333;
+  background: #eeeeee;
+}
+
+button.active {
+  background: #cdcdcd;
+}
+
 a {
   color: #14225b;
   text-decoration: none;  
@@ -121,15 +154,6 @@ a {
 
 .a-button {
   cursor: pointer;
-}
-
-.changing-photo-numb-container  a:hover, .next-prev-container a:hover {
-  color: #333;
-  background: #eeeeee;
-}
-
-.active {
-  background: #cdcdcd;
 }
 
 .contrast-on, .contrast-on a,  .contrast-on .fa-adjust::before {

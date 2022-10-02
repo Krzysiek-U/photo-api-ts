@@ -1,5 +1,23 @@
 import  {useState}  from 'react';
 
+
+interface ButtonProps {
+  id: string;
+  title: string; 
+  txt: string;
+  onClick:  ( ) => void;    
+}
+
+const Button = (props:ButtonProps) => {
+  return ( 
+    <button id={props.id} 
+            title={props.title}
+            className='a-button font-size-change' 
+            onClick={props.onClick}
+      >{props.txt}</button>
+    );
+}
+
 const FontSizeChanger = () => {  
   
   let doc = document.getElementsByTagName("html");
@@ -15,11 +33,11 @@ const FontSizeChanger = () => {
   }
 
     return (
-      <span id='changeFontSizeContener'>
-        <a id='changeFontSizeDown' title='Zmniejsz wielkość czcionki' className='a-button font-size-change' role="button" tabIndex={0} onClick={ () =>  htmlFont(rootFontSize-2)  }> - </a>
-        <a id='changeFontSizeStart' title='Ustaw standardową wielkść czcionki' className='a-button font-size-change' role="button" tabIndex={0} onClick={ () =>  htmlFont(rootFontSizeStart)  }> A </a>
-        <a id='changeFontSizeUp' title='Zwiększ wielkość czcionki' className='a-button font-size-change'  role="button" tabIndex={0} onClick={ () =>  htmlFont(rootFontSize+2)  }> + </a>
-      </span>
+      <div id='changeFontSizeContener'>
+        <Button id={'changeFontSizeDown'} title={'Zmniejsz wielkość czcionki'}  txt={' - '} onClick={ () =>  htmlFont(rootFontSize-2) }/>
+        <Button id={'changeFontSizeStart'} title={'Ustaw standardową wielkść czcionki'}  txt={' A '} onClick={ () =>  htmlFont(rootFontSizeStart) }/>
+        <Button id={'changeFontSizeUp'} title={'Zwiększ wielkość czcionki'}  txt={' + '} onClick={ () =>  htmlFont(rootFontSize+2) }/>
+      </div>
   );
 };
 

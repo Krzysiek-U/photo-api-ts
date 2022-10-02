@@ -31,6 +31,7 @@ nav {
 }
 
 #prevPhotos {
+  border-radius: 0px;
   border: 1px solid #e3e3e3;
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
@@ -40,13 +41,14 @@ nav {
 .next-prev-container span {
   border: 1px solid #e3e3e3;
   display: inline-block;
-  padding: 8px 10px;
+  padding: 9px 10px;
     /* margin: 10px 1px; */
   position: relative;
-  top: 1px;
+  top: 0px;
 }
 
 #nextPhotos {
+  border-radius: 0px;
   border: 1px solid #e3e3e3;
   border-top-right-radius: 14px;
   border-bottom-right-radius: 14px;
@@ -121,14 +123,14 @@ i {
 }
 
 button {
-  font-size: 18px;
+  font-size: 1rem;
   font-family: Roboto,sans-serif;
   background: #fff;
+  border-radius: 10px;
 }
 
 .changing-photo-numb-container button {
   border: 1px solid #e3e3e3;
-  border-radius: 10px;
   color: #14225b;
   padding: 8px;
   text-decoration: none;
@@ -136,13 +138,24 @@ button {
   margin: 3px 5px;
 }
 
-.changing-photo-numb-container  button:hover, .next-prev-container button:hover {
+.changing-photo-numb-container  button:hover, .next-prev-container button:hover, button:hover {
   color: #333;
   background: #eeeeee;
 }
 
 button.active {
   background: #cdcdcd;
+}
+
+.font-size-change {
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+}
+
+.contrast-change{
+  background: none;
+  border: none;
 }
 
 a {
@@ -154,6 +167,10 @@ a {
 
 .a-button {
   cursor: pointer;
+}
+
+#changeFontSizeContener {
+  margin: 16px 0 0 10px;
 }
 
 .contrast-on, .contrast-on a,  .contrast-on .fa-adjust::before {

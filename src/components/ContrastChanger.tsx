@@ -11,7 +11,7 @@ const ContrastChanger = () => {
 
     return (
       <span id='changeContrastContener'>
-        <a id='changeContrast' title='Zmnień kontrast' className='a-button contrastChange' role="button" tabIndex={0} onClick={ () =>  changeContrast()  }><i className="fa fa-adjust"></i></a>
+        <button id='changeContrast' title='Zmnień kontrast' className='a-button contrast-change' onClick={ () =>  changeContrast()  }><i className="fa fa-adjust"></i></button>
       </span>
   );
 };

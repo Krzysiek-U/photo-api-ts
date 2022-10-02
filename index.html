@@ -3,6 +3,7 @@
   
       <script type="text/javascript">
       (function(l) {
+        console.log("l.search[1]  "+l.search[1] );
         if (l.search[1] === '/' ) {
           var decoded = l.search.slice(1).split('&').map(function(s) { 
             console.log( s.replace(/~and~/g, '&') );

@@ -12,7 +12,8 @@ function App() {
 
   return (
     //<Router basename={process.env.PUBLIC_URL}>   
-    <Router basename='/photo-api-ts'>  
+    //<Router  path={process.env.PUBLIC_URL + '/'}>
+    <Router basename='/photo-api-ts/'>  
       <div className="App contrast" >
         <header className="header contrast">
           <Nav/>

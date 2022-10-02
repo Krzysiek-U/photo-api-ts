@@ -11,16 +11,15 @@ import './App.css';
 function App() {
 
   return (
-    //<Router basename={process.env.PUBLIC_URL}>   
-    <Router >   
+    <Router basename={process.env.PUBLIC_URL}>   
       <div className="App contrast" >
         <header className="header contrast">
           <Nav/>
         </header>        
         <Routes>
-          <Route path= '/photo-api-ts/' element={<Main/>} />
-          <Route path= '/photo-api-ts/photo' element={<PhotoBig/>} />
-          <Route path= '/photo-api-ts/about' element={<About/>} />
+          <Route path= '/' element={<Main/>} />
+          <Route path= '/photo' element={<PhotoBig/>} />
+          <Route path= '/about' element={<About/>} />
         </Routes>
         <footer className="footer contrast">
           <Footer/>

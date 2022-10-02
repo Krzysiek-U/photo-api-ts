@@ -18,8 +18,8 @@ function App() {
         </header>        
         <Routes>
           <Route path= '/' element={<Main/>} />
-          <Route path= '/photo-api-ts/photo' element={<PhotoBig/>} />
-          <Route path= '/photo-api-ts/about' element={<About/>} />
+          <Route path= '/photo' element={<PhotoBig/>} />
+          <Route path= '/about' element={<About/>} />
         </Routes>
         <footer className="footer contrast">
           <Footer/>

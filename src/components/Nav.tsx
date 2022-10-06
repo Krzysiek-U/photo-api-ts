@@ -4,7 +4,7 @@ import SiteNavMenu from './SiteNavMenu';
 
 const Nav = () => {   
     return (
-    <nav className='contrast'>
+    <nav className='navigation-bar contrast'>
       <SiteNavMenu/>
       <FontSizeChanger/>
       <ContrastChanger/>

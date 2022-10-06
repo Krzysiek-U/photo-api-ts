@@ -12,7 +12,7 @@ const Button = (props:ButtonProps) => {
   return ( 
     <button id={props.id} 
             title={props.title}
-            className='a-button font-size-change' 
+            className='button font-size-change' 
             onClick={props.onClick}
       >{props.txt}</button>
     );
@@ -33,7 +33,7 @@ const FontSizeChanger = () => {
   }
 
     return (
-      <div id='changeFontSizeContener'>
+      <div id='FontSizeContainer' className='font-size-container'>
         <Button id={'changeFontSizeDown'} title={'Zmniejsz wielkość czcionki'}  txt={' - '} onClick={ () =>  htmlFont(rootFontSize-2) }/>
         <Button id={'changeFontSizeStart'} title={'Ustaw standardową wielkść czcionki'}  txt={' A '} onClick={ () =>  htmlFont(rootFontSizeStart) }/>
         <Button id={'changeFontSizeUp'} title={'Zwiększ wielkość czcionki'}  txt={' + '} onClick={ () =>  htmlFont(rootFontSize+2) }/>

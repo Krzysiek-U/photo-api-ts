@@ -48,7 +48,7 @@ function  Main()  {
     return (        
       <main>
         <Banner/>
-        <div id='photoNav' className='photo-nav'>          
+        <div id='photoNav' className='photo-nav row'>          
           <NextPrev page={page} limit={limit} maxPhotoNumb={maxPhotoNumb} changePage={changePage} />
           <PhotoNumbChanger limit={limit} changePhotoNumb={changePhotoNumb} />
         </div>

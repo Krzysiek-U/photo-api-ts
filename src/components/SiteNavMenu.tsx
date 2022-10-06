@@ -4,9 +4,17 @@ const SiteNavMenu = () => {
     return (
       <div id='siteNavMenu' className='site-nav-menu'>
         <div>
-          <NavLink to={`/`}>Galeria</NavLink>
+          <NavLink
+            className={'link'}
+            to={`/`} 
+            title= { `Przejdź do strony Galeria` }
+          >Galeria</NavLink>
           <span>|</span>
-          <NavLink to={`/about`}>O galerii</NavLink>
+          <NavLink
+            className={'link'}
+            to={`/about`}            
+            title= { `Przejdź do podstrony O galerii` }
+          >O galerii</NavLink>
         </div>
       </div>
   );

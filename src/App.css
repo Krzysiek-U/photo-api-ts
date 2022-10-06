@@ -204,6 +204,7 @@ h1 {
 
 .container-photo-big h1 {
   margin: 0 40px 0 5vw;
+  font-size: calc(2.5vw + 1rem);
 }
 
 .container-photo-big h1 span {

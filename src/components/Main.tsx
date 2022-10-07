@@ -26,6 +26,7 @@ function  Main()  {
       }).catch((error) => {
         setIsLoaded(false);
       })
+      .catch(err => console.log(err));
     }, [page, limit])    
 
     const changePage  = (pageTemp:string) => {    

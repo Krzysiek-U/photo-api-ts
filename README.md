@@ -10,6 +10,7 @@
 - React Router
 
 ### User Experience and Designing for UX Accessibility.
+ - [WCAG 2.1](https://www.w3.org/TR/WCAG21/) 
 
 ### React Unit Testing Using Jest and react testing library.
 

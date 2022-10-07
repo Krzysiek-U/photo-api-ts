@@ -179,6 +179,10 @@ button.active {
   width: max-content;
 }
 
+.site-nav-menu .link:hover {
+  border-bottom: 5px solid #cdcdcd;
+}
+
 .a-button {
   cursor: pointer;
 }

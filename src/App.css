@@ -180,7 +180,7 @@ button.active {
 }
 
 .site-nav-menu .link:hover {
-  border-bottom: 5px solid #cdcdcd;
+  border-bottom: 5px solid #333;
 }
 
 .a-button {

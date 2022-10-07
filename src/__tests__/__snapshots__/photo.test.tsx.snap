@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Photo component should match the snapshot 1`] = `
+<div>
+    
+  <div
+    class="photo-container contrast"
+  >
+    <a
+      class="link photo"
+      href="/photo/?id=1&autor=Alejandro Escamilla"
+      title="Przejdź do zdjęcia o numerze 1, autor zdjęcia: Alejandro Escamilla"
+    >
+      <img
+        alt="Zdjęcie o numerze 1, autor zdjęcia: Alejandro Escamilla"
+        class="photo"
+        src="https://picsum.photos/id/1/300/200/"
+      />
+      <div
+        class="contrast photo title"
+      >
+        Alejandro Escamilla
+      </div>
+    </a>
+  </div>
+   
+</div>
+`;

@@ -10,6 +10,5 @@ describe( 'Photo component', () => {
     test('should match the snapshot', () => {
         const { container } = render(<Router>  <Photo key={index} photo={photo} /> </Router>  );
         expect(container).toMatchSnapshot();
-        //expect(1).toBe(1);
     })    
 });

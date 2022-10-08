@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router} from "react-router-dom";
 import { render } from '@testing-library/react';
 import Photo from '../components/Photo';
-//import { createMemoryHistory } from 'history';
 
 
 const photo = { id : 1, author : 'Alejandro Escamilla' };

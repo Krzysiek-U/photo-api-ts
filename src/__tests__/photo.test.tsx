@@ -10,8 +10,6 @@ const index = 1;
 
 describe( 'Photo component', () => {
     test('should match the snapshot', () => {
-        //const history = createMemoryHistory({ initialEntries: ['/'] });
-        //const history = createMemoryHistory({ initialEntries: ['/page1', '/page2'] });
         const { container } = render(
             <Router >
                 <Photo photo={photo} />

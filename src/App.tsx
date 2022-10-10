@@ -11,15 +11,15 @@ import './App.css';
 
 function App() {
   
-  const [page, setPage] = useState(8);
+  const [page, setPage] = useState(1);
 
   const pageConfig = (pageNumber:number) => {  
     setPage(pageNumber);
   }    
 
   return (
-    //</Router basename={process.env.PUBLIC_URL}>
-    <Router>   
+    //</Router>
+    <Router basename={process.env.PUBLIC_URL}>   
       <div className="App contrast" >
         <header className="header contrast">
           <Nav/>

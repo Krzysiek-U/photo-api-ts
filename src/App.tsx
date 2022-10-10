@@ -11,21 +11,21 @@ import './App.css';
 
 function App() {
   
-  const [page, setPage] = useState(1);
+  const [pageCfg, setPageCfg] = useState({page: 1, limit: 30 });
 
-  const pageConfig = (pageNumber:number) => {  
-    setPage(pageNumber);
+  const pageConfig = (pageNumber:number, limitNumber: number) => {  
+    setPageCfg({page: pageNumber, limit: limitNumber});
   }    
 
   return (
-    //</Router basename={process.env.PUBLIC_URL}>
-    <Router>   
+    //</Router>
+    <Router basename={process.env.PUBLIC_URL}>   
       <div className="App contrast" >
         <header className="header contrast">
           <Nav/>
         </header>        
         <Routes>
-          <Route path= '/' element={<Main page={page} pageConfig={pageConfig}/>} />
+          <Route path= '/' element={<Main pageCfg={pageCfg} pageConfig={pageConfig}/>} />
           <Route path= '/photo' element={<PhotoBig/>} />
           <Route path= '/about' element={<About/>} />
         </Routes>

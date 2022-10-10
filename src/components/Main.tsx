@@ -5,8 +5,8 @@ import PhotoNumbChanger from './PhotoNumbChanger';
 import Banner from './Banner';
  
 interface MainProps {
-  page: number;
-  pageConfig: ( pageNumber: number ) => void;
+  pageCfg: { page: number, limit: number};
+  pageConfig: ( pageNumber: number, limitNumber: number ) => void;
 }
 
 function  Main( props: MainProps )  {
@@ -14,8 +14,8 @@ function  Main( props: MainProps )  {
     const [error, setError] = useState('');
     const [isLoading, setIsLoaded] = useState(true);
     const [newTab, setNewTab] = useState([]);
-    const [page, setPage] = useState(props.page);
-    const [limit, setLimit] = useState(30);
+    const [page, setPage] = useState(props.pageCfg.page);
+    const [limit, setLimit] = useState(props.pageCfg.limit);
     const maxPhotoNumb = 900;
     
     useEffect(() => {
@@ -35,8 +35,8 @@ function  Main( props: MainProps )  {
     }, [page, limit])   
     
     useEffect(() => {
-      props.pageConfig(page);
-    }, [page])   
+      props.pageConfig(page, limit);
+    }, [page, limit])   
     
 
     const changePage  = (pageTemp:string) => {    

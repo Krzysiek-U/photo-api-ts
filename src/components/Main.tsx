@@ -4,12 +4,17 @@ import NextPrev from './NextPrev';
 import PhotoNumbChanger from './PhotoNumbChanger';
 import Banner from './Banner';
  
-function  Main()  {
+interface MainProps {
+  page: number;
+  pageConfig: ( pageNumber: number ) => void;
+}
+
+function  Main( props: MainProps )  {
 
     const [error, setError] = useState('');
     const [isLoading, setIsLoaded] = useState(true);
     const [newTab, setNewTab] = useState([]);
-    const [page, setPage] = useState(1);
+    const [page, setPage] = useState(props.page);
     const [limit, setLimit] = useState(30);
     const maxPhotoNumb = 900;
     
@@ -27,7 +32,12 @@ function  Main()  {
         setIsLoaded(false);
       })
       .catch(err => console.log(err));
-    }, [page, limit])    
+    }, [page, limit])   
+    
+    useEffect(() => {
+      props.pageConfig(page);
+    }, [page])   
+    
 
     const changePage  = (pageTemp:string) => {    
       if (pageTemp === 'prev' && page > 1) setPage(page-1) 

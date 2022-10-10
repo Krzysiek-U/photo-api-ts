@@ -9,6 +9,10 @@
 - useEffect
 - React Router
 
+### Site config 
+Current gallery page and image limit on gallery page.
+
+
 ### User Experience and Designing for UX Accessibility.
  - [WCAG 2.1](https://www.w3.org/TR/WCAG21/) 
 

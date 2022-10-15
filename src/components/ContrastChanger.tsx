@@ -1,17 +1,16 @@
-const ContrastChanger = () => {  
+import React  from 'react';
+import {useEffect}  from 'react';
 
-  const changeContrast  = () => {  
-      let classElements = document.getElementsByClassName('contrast');
-      if(classElements){
-        for(var i = 0; i < classElements.length; i++) {
-            classElements[i].classList.toggle("contrast-on");
-          }
-      }
-  }
+interface ContrastChangerProps {
+  onClick:  ( ) => void;    
+}
+
+
+const ContrastChanger = (props:ContrastChangerProps) => {  
 
     return (
       <span id='contrastContainer' className="contrast-container">
-        <button id='changeContrast' title='Zmnień kontrast' className='a-button contrast-change' onClick={ () =>  changeContrast()  }><i className="fa fa-adjust"></i></button>
+        <button id='changeContrast' title='Zmnień kontrast' className='a-button contrast-change' onClick={ () =>  props.onClick()  }><i className="fa fa-adjust"></i></button>
       </span>
   );
 };

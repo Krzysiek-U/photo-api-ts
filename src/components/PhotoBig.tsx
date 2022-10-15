@@ -1,10 +1,13 @@
 import {useState, useEffect}  from 'react';
 import { Link, useSearchParams  } from "react-router-dom";
 
-const Photo = () => {
+interface NavProps {
+  pageContrast: boolean;
+}
+
+const PhotoBig = (props:NavProps) => {
 
   const [searchParams] = useSearchParams();
-
   const [error, setError] = useState('');
   const [isLoading, setIsLoaded] = useState(true);
   const [imageBig, setImageBig] = useState('');
@@ -25,6 +28,16 @@ const Photo = () => {
     });
   }, [])    
 
+  useEffect(() => { 
+    console.log('contrast change effect '+props.pageContrast);
+    let classElements = document.getElementsByClassName('contrast-photo-big');
+    if(classElements){
+      for(var i = 0; i < classElements.length; i++) {
+       props.pageContrast ? classElements[i].classList.add("contrast-on") : classElements[i].classList.remove("contrast-on");
+        }
+    }
+  }, [props.pageContrast])   
+
   const PhotoBigResponse = () => {
     if (isLoading) {
       return  <div className='container-loader'><div className="loader"></div></div>  ;
@@ -42,7 +55,7 @@ const Photo = () => {
   }
 
   return (    
-    <div className='container-photo-big contrast'>
+    <div className='container-photo-big contrast-photo-big'>
       <Link
         className='link back'
         to={`/`}
@@ -50,10 +63,10 @@ const Photo = () => {
       >
         <span className='photo-big-link'><i className="fa fa-chevron-left"></i>  powrót na stronę galerii</span>
       </Link>  
-      <h1 className='contrast photo-big'><span>Autor zdjęcia: </span> {searchParams.get('autor')} </h1>
+      <h1 className='contrast-photo-big photo-big'><span>Autor zdjęcia: </span> {searchParams.get('autor')} </h1>
       <PhotoBigResponse />
     </div>
   );
 };
 
-export default Photo;
+export default PhotoBig;

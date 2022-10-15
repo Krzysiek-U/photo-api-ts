@@ -6,6 +6,7 @@ import Banner from './Banner';
  
 interface MainProps {
   pageCfg: { page: number, limit: number};
+  pageContrast: boolean;
   pageConfig: ( pageNumber: number, limitNumber: number ) => void;
 }
 
@@ -53,12 +54,12 @@ function  Main( props: MainProps )  {
     }
 
     const photoList = newTab.map((photo, index) => {
-      return <Photo key={index} photo={photo} />;
+      return <Photo key={index} photo={photo}  pageContrast={props.pageContrast} />;
     })   
 
     return (        
       <main>
-        <Banner/>
+        <Banner  pageContrast={props.pageContrast} />
         <div id='photoNav' className='photo-nav row'>          
           <NextPrev page={page} limit={limit} maxPhotoNumb={maxPhotoNumb} changePage={changePage} />
           <PhotoNumbChanger limit={limit} changePhotoNumb={changePhotoNumb} />

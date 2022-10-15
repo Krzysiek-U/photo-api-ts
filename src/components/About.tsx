@@ -1,9 +1,13 @@
 import Banner from './Banner';
 
-const About = () => {  
+interface AboutProps {
+  pageContrast: boolean;
+}
+
+const About = (props: AboutProps) => {  
     return (
     <div className="about contrast">
-      <Banner />
+      <Banner  pageContrast={props.pageContrast} />
       <div className='about-txt'>
         <p className="leading-loose">API: Lorem Picsum The Lorem Ipsum for photos.</p>
         <img

@@ -32,8 +32,8 @@ function App() {
   }    
 
   return (
-    //</Router>
-    <Router basename={process.env.PUBLIC_URL}>   
+    //</Router basename={process.env.PUBLIC_URL}>
+    <Router>   
       <div className="App contrast" >
         <header className="header contrast">
           <Nav onClick={ changeContrast }  />

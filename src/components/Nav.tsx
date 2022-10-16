@@ -14,8 +14,8 @@ const Nav = (props:NavProps) => {
   let contrastOn: string = '';
 
   useEffect(() => { 
-    console.log('nav contrastOn: '+props.pageContrast);
     if(props.pageContrast) contrastOn = 'contrast-on';
+    console.log('nav contrastOn: '+props.pageContrast+' contrastOn '+ contrastOn);
   }, [props.pageContrast])   
 
     return (

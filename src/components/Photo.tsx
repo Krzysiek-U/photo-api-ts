@@ -9,7 +9,6 @@ interface PhotoProps {
 const Photo = ( props: PhotoProps ) => {
   
   useEffect(() => { 
-    console.log('contrast change effect '+props.pageContrast);
     let classElements = document.getElementsByClassName('contrast-photo');
     if(classElements){
       for(var i = 0; i < classElements.length; i++) {

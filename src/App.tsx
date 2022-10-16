@@ -18,7 +18,8 @@ function App() {
   }
 
   useEffect(() => { 
-    console.log('useEffect '+pageContrast);
+    //console.log('useEffect '+pageContrast);
+
     let classElements = document.getElementsByClassName('contrast');
     if(classElements){
       for(var i = 0; i < classElements.length; i++) {
@@ -32,11 +33,11 @@ function App() {
   }    
 
   return (
-    //</Router basename={process.env.PUBLIC_URL}>
-    <Router>   
+    //</Router>
+    <Router basename={process.env.PUBLIC_URL}>   
       <div className="App contrast" >
         <header className="header contrast">
-          <Nav onClick={ changeContrast }  />
+          <Nav pageContrast={pageContrast} onClick={ changeContrast }  />
         </header>        
         <Routes>
           <Route path= '/' element={<Main pageCfg={pageCfg}  pageContrast={pageContrast} pageConfig={pageConfig}/>} />

@@ -20,8 +20,8 @@ function App() {
   let contrastOn: string = '';
 
   useEffect(() => { 
-    console.log('contrastOn '+contrastOn);
     if(pageContrast) contrastOn = 'contrast-on';
+    console.log('contrastOn '+contrastOn);
   }, [pageContrast])   
 
 

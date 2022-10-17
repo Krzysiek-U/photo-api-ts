@@ -11,19 +11,17 @@ import './App.css';
 function App() {
   
   const [pageCfg, setPageCfg] = useState({page: 1, limit: 30 });
-  const [pageContrast, setpageContrast] = useState(false);
-
-  const changeContrast  = () => { 
-    pageContrast ? setpageContrast(false) : setpageContrast(true) ;
-  }
- 
-  let contrastOn: string = '';
+  const [pageContrast, setPageContrast] = useState(false);
+  const [contrastOn, setContrastOn] = useState('');
 
   useEffect(() => { 
-    if(pageContrast) contrastOn = 'contrast-on';
-    console.log('contrastOn '+contrastOn);
+    pageContrast ? setContrastOn('contrast-on') : setContrastOn('');
   }, [pageContrast])   
 
+
+  const changeContrast  = () => { 
+    pageContrast ? setPageContrast(false) : setPageContrast(true) ;
+  }
 
   const pageConfig = (pageNumber:number, limitNumber: number) => {  
     setPageCfg({page: pageNumber, limit: limitNumber});

@@ -11,10 +11,10 @@ interface NavProps {
 
 const Nav = (props:NavProps) => {   
 
-  let contrastOn: string = '';
+  const [contrastOn, setContrastOn] = useState('');
 
   useEffect(() => { 
-    if(props.pageContrast) contrastOn = 'contrast-on';
+    props.pageContrast ? setContrastOn('contrast-on') : setContrastOn('');
   }, [props.pageContrast])   
 
     return (

@@ -11,7 +11,7 @@ const PhotoBig = (props:NavProps) => {
   const [error, setError] = useState('');
   const [isLoading, setIsLoaded] = useState(true);
   const [imageBig, setImageBig] = useState('');
-
+  const [contrastOn, setContrastOn] = useState('');
 
   useEffect(() => {
     fetch( `https://picsum.photos/id/${searchParams.get('id')}/800` ).then((response) => {
@@ -29,13 +29,7 @@ const PhotoBig = (props:NavProps) => {
   }, [])    
 
   useEffect(() => { 
-    console.log('contrast change effect '+props.pageContrast);
-    let classElements = document.getElementsByClassName('contrast-photo-big');
-    if(classElements){
-      for(var i = 0; i < classElements.length; i++) {
-       props.pageContrast ? classElements[i].classList.add("contrast-on") : classElements[i].classList.remove("contrast-on");
-        }
-    }
+    props.pageContrast ? setContrastOn('contrast-on') : setContrastOn('');
   }, [props.pageContrast])   
 
   const PhotoBigResponse = () => {
@@ -55,7 +49,7 @@ const PhotoBig = (props:NavProps) => {
   }
 
   return (    
-    <div className='container-photo-big contrast-photo-big'>
+    <div className={`container-photo-big contrast ${contrastOn}`}>
       <Link
         className='link back'
         to={`/`}
@@ -63,7 +57,9 @@ const PhotoBig = (props:NavProps) => {
       >
         <span className='photo-big-link'><i className="fa fa-chevron-left"></i>  powrót na stronę galerii</span>
       </Link>  
-      <h1 className='contrast-photo-big photo-big'><span>Autor zdjęcia: </span> {searchParams.get('autor')} </h1>
+      <h1 className={`photo-big' contrast ${contrastOn}`}>
+        <span>Autor zdjęcia: </span> {searchParams.get('autor')}
+      </h1>
       <PhotoBigResponse />
     </div>
   );

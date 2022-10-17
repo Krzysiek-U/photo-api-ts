@@ -40,7 +40,7 @@ function App() {
           <Route path= '/about' element={<About pageContrast={pageContrast} />} />
         </Routes>
         <footer className={`footer contrast ${contrastOn}`}>
-          <Footer/>
+          <Footer pageContrast={pageContrast} />
         </footer>
       </div>
     </Router>

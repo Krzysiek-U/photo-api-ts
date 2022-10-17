@@ -94,10 +94,13 @@
 .site-nav-menu {
   flex: auto;
   background: #fff;
+  display: flex;
+  flex-direction: row;
 }
 
 .site-nav-menu > div {
-  margin-left: 2vw;
+  /*margin-left: 2vw;*/
+  padding: 20px 2vw;
 }
 
 span {
@@ -320,9 +323,17 @@ h2{
   }
 } 
 
-/* Responsive layout - makes a one column layout instead of a two-column layout */
 @media (max-width: 800px) {
   .row{
     flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  .site-nav-menu {
+    flex-direction: column;
+  }
+  .site-nav-menu > div {
+    padding: 10px 10px;
   }
 }

@@ -16,7 +16,9 @@ function  Main( props: MainProps )  {
     const [isLoading, setIsLoaded] = useState(true);
     const [newTab, setNewTab] = useState([]);
     const [page, setPage] = useState(props.pageCfg.page);
-    const [limit, setLimit] = useState(props.pageCfg.limit);
+    const [limit, setLimit] = useState(props.pageCfg.limit);    
+    const [contrastOn, setContrastOn] = useState('');
+
     const maxPhotoNumb = 900;
     
     useEffect(() => {
@@ -38,7 +40,10 @@ function  Main( props: MainProps )  {
     useEffect(() => {
       props.pageConfig(page, limit);
     }, [page, limit])   
-    
+
+    useEffect(() => { 
+      props.pageContrast ? setContrastOn('contrast-on') : setContrastOn('');
+    }, [props.pageContrast])       
 
     const changePage  = (pageTemp:string) => {    
       if (pageTemp === 'prev' && page > 1) setPage(page-1) 
@@ -64,7 +69,7 @@ function  Main( props: MainProps )  {
           <NextPrev page={page} limit={limit} maxPhotoNumb={maxPhotoNumb} changePage={changePage} />
           <PhotoNumbChanger limit={limit} changePhotoNumb={changePhotoNumb} />
         </div>
-        <div className="row photo-table-container contrast">
+        <div className={`row photo-table-container  contrast ${contrastOn}`}>
           {isLoading ? <div className='container-loader'><div className="loader"></div></div>  : ''}        
           {!error ? <div> { photoList } </div> : <div className='container-error'><div className="error">{error}</div></div>}
         </div>

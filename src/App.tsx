@@ -17,16 +17,12 @@ function App() {
     pageContrast ? setpageContrast(false) : setpageContrast(true) ;
   }
 
+ 
+  let contrastOn: string = '';
   useEffect(() => { 
-    //console.log('useEffect '+pageContrast);
-
-    let classElements = document.getElementsByClassName('contrast');
-    if(classElements){
-      for(var i = 0; i < classElements.length; i++) {
-          classElements[i].classList.toggle("contrast-on");
-        }
-    }
+    if(pageContrast) contrastOn = 'contrast-on';
   }, [pageContrast])   
+
 
   const pageConfig = (pageNumber:number, limitNumber: number) => {  
     setPageCfg({page: pageNumber, limit: limitNumber});
@@ -35,8 +31,8 @@ function App() {
   return (
     //</Router>
     <Router basename={process.env.PUBLIC_URL}>   
-      <div className="App contrast" >
-        <header className="header contrast">
+      <div className={`App contrast ${contrastOn}`}>
+        <header className={`header contrast ${contrastOn}`}>
           <Nav pageContrast={pageContrast} onClick={ changeContrast }  />
         </header>        
         <Routes>
@@ -44,7 +40,7 @@ function App() {
           <Route path= '/photo' element={<PhotoBig  pageContrast={pageContrast} />} />
           <Route path= '/about' element={<About pageContrast={pageContrast} />} />
         </Routes>
-        <footer className="footer contrast">
+        <footer className={`footer contrast ${contrastOn}`}>
           <Footer/>
         </footer>
       </div>

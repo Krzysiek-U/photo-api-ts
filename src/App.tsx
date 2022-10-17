@@ -16,10 +16,11 @@ function App() {
   const changeContrast  = () => { 
     pageContrast ? setpageContrast(false) : setpageContrast(true) ;
   }
-
  
   let contrastOn: string = '';
+
   useEffect(() => { 
+    console.log('contrastOn '+contrastOn);
     if(pageContrast) contrastOn = 'contrast-on';
   }, [pageContrast])   
 

@@ -6,10 +6,10 @@ interface AboutProps {
 
 const About = (props: AboutProps) => {  
     return (
-    <div className="about contrast">
+    <div className="about-container contrast">
       <Banner  pageContrast={props.pageContrast} />
-      <div className='about-txt'>
-        <p className="leading-loose">API: Lorem Picsum The Lorem Ipsum for photos.</p>
+      <div className='about-main-container'>
+        <p className="about-text">API: Lorem Picsum The Lorem Ipsum for photos.</p>
         <img
           alt = { `Losowe zdjęcie` }
           className='photo'

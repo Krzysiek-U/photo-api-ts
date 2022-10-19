@@ -63,7 +63,7 @@ function  Main( props: MainProps )  {
     })   
 
     return (        
-      <main>
+      <main className='main-container'>
         <Banner  pageContrast={props.pageContrast} />
         <div id='photoNav' className='photo-nav row'>          
           <NextPrev page={page} limit={limit} maxPhotoNumb={maxPhotoNumb} changePage={changePage} />

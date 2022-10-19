@@ -30,10 +30,10 @@ function App() {
   return (
     //</Router >
     <Router basename={process.env.PUBLIC_URL}>   
-      <div className={`App contrast ${contrastOn}`}>
+      <div className={`app contrast ${contrastOn}`}>
         <header className={`header contrast ${contrastOn}`}>
           <Nav pageContrast={pageContrast} onClick={ changeContrast }  />
-        </header>        
+        </header>   
         <Routes>
           <Route path= '/' element={<Main pageCfg={pageCfg}  pageContrast={pageContrast} pageConfig={pageConfig}/>} />
           <Route path= '/photo' element={<PhotoBig  pageContrast={pageContrast} />} />

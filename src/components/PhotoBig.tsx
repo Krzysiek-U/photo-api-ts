@@ -49,7 +49,7 @@ const PhotoBig = (props:NavProps) => {
   }
 
   return (    
-    <div className={`container-photo-big contrast ${contrastOn}`}>
+    <div className={`photo-big-container contrast ${contrastOn}`}>
       <Link
         className='link back'
         to={`/`}
